@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两列布局</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        body {
+            padding: 10px;
+        }
+        .section {
+            height: 300px;
+            position: relative;
+        }
+        .flex {
+            display: flex;
+        }
+        .fl {
+            float: left;
+        }
+        .fr {
+            float: right;
+        }
+        .section {
+            border-top: 1px solid #333;
+        }
+        .left {
+            width: 200px;
+            height: 100%;
+            background:#ff0;
+        }
+        .content {
+            display: table-cell;
+        }
+        .left2 {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            background:#ff0;
+            height: 100%;
+        }
+        .content2{
+            margin-left: 200px;
+        }
+        .left3 {
+            width: 200px;
+            background:#ff0;
+            height: 100%;
+        }
+        .content3 {
+            margin-left: 200px;
+        }
+
+        .left4 {
+            width: 200px;
+            background:#ff0;
+            height: 100%;
+        }
+        .content4 {
+            width: 100%;
+            padding-left: 200px;
+            margin-left: -200px;
+            box-sizing: border-box;
+        }
+
+        .left5 {
+            width: 200px;
+            background:#ff0;
+            height: 100%;
+            margin-left: -100%;
+        }
+        .content5 {
+            width: 100%;
+        }
+        .main {
+            padding-left: 200px;
+        }
+        .left6 {
+            width: 200px;
+            background:#ff0;
+            height: 100%;
+        }
+        .content6 {
+            width: 100%;
+            flex: 1;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h2>1.左侧浮动+右侧table-cell</h2>
+    <div class="section">
+        <div class="left fl">
+            <img width="100" src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20190603/a66df342-0de2-42ef-97f7-59baf80c3647.png" alt="">
+        </div>
+        <div class="content">
+            <h3>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</h3>
+            <p>微博：坐在办公室，只听轰隆隆几声巨响，晴天也能打雷吗？原来街对面的芭莎咖啡厅被炸成了两截。这定点爆破也太失败了，也不清下场，把路过的汽车震得灰头土脸，愣在路中央不知如何是好。其次，房子只炸了一半，另一半屹立不倒，是zha药太水还是房子质量太好？</p>
+        </div>
+    </div>
+    <h2>2. 左侧绝对定位+右侧margin-left</h2>
+    <div class="section">
+        <div class="left2">
+            <img width="100" src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20190603/a66df342-0de2-42ef-97f7-59baf80c3647.png" alt="">
+        </div>
+        <div class="content2">
+            <h3>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</h3>
+            <p>微博：坐在办公室，只听轰隆隆几声巨响，晴天也能打雷吗？原来街对面的芭莎咖啡厅被炸成了两截。这定点爆破也太失败了，也不清下场，把路过的汽车震得灰头土脸，愣在路中央不知如何是好。其次，房子只炸了一半，另一半屹立不倒，是zha药太水还是房子质量太好？</p>
+        </div>
+    </div>
+    <h2>3. 左侧浮动+右侧margin-left</h2>
+    <div class="section">
+        <div class="left3 fl">
+            <img width="100" src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20190603/a66df342-0de2-42ef-97f7-59baf80c3647.png" alt="">
+        </div>
+        <div class="content3">
+            <h3>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</h3>
+            <p>微博：坐在办公室，只听轰隆隆几声巨响，晴天也能打雷吗？原来街对面的芭莎咖啡厅被炸成了两截。这定点爆破也太失败了，也不清下场，把路过的汽车震得灰头土脸，愣在路中央不知如何是好。其次，房子只炸了一半，另一半屹立不倒，是zha药太水还是房子质量太好？</p>
+        </div>
+       
+    </div>
+    <h2>4. 左侧浮动+右侧浮动（margin-left负边距拉回+padding-left+border-box）</h2>
+    <div class="section">
+        <div class="left4 fl">
+            <img width="100" src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20190603/a66df342-0de2-42ef-97f7-59baf80c3647.png" alt="">
+        </div>
+        <div class="content4 fl">
+            <h3>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</h3>
+            <p>微博：坐在办公室，只听轰隆隆几声巨响，晴天也能打雷吗？原来街对面的芭莎咖啡厅被炸成了两截。这定点爆破也太失败了，也不清下场，把路过的汽车震得灰头土脸，愣在路中央不知如何是好。其次，房子只炸了一半，另一半屹立不倒，是zha药太水还是房子质量太好？</p>
+        </div>
+    </div>
+    <h2>5. 左侧浮动+右侧浮动</h2>
+    <div class="section">
+        <div class="content5 fl">
+            <div class="main">
+                <h3>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</h3>
+                <p>微博：坐在办公室，只听轰隆隆几声巨响，晴天也能打雷吗？原来街对面的芭莎咖啡厅被炸成了两截。这定点爆破也太失败了，也不清下场，把路过的汽车震得灰头土脸，愣在路中央不知如何是好。其次，房子只炸了一半，另一半屹立不倒，是zha药太水还是房子质量太好？</p>
+            </div>
+        </div>
+        <div class="left5 fl">
+            <img width="100" src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20190603/a66df342-0de2-42ef-97f7-59baf80c3647.png" alt="">
+        </div>
+    </div>
+    <h2>6. flex</h2>
+    <div class="section flex">
+        <div class="left6">
+            <img width="100" src="https://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20190603/a66df342-0de2-42ef-97f7-59baf80c3647.png" alt="">
+        </div>
+        <div class="content6">
+            <h3>签名：想找个保鲜盒把你给我的那些感动都装起来。当你让我伤心的时候就拿出来回味一下。</h3>
+            <p>微博：坐在办公室，只听轰隆隆几声巨响，晴天也能打雷吗？原来街对面的芭莎咖啡厅被炸成了两截。这定点爆破也太失败了，也不清下场，把路过的汽车震得灰头土脸，愣在路中央不知如何是好。其次，房子只炸了一半，另一半屹立不倒，是zha药太水还是房子质量太好？</p>
+        </div>
+    </div>
+</body>
+</html>
